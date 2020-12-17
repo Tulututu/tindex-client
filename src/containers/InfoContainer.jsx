@@ -8,12 +8,12 @@ import InfoUserName from '../components/systems/user_info/InfoUserName';
 import InfoGender from '../components/systems/user_info/InfoGender';
 import InfoUserImage from '../components/systems/user_info/InfoUserImage';
 import InfoResidence from '../components/systems/user_info/InfoResidence';
-
 import { authUser } from '../modules/auth';
 
-// TODO ======================
-// TODO    INFO_CONTAINER (CT)
-// TODO ======================
+//* ======================
+//*    InfoContainer.jsx
+//* ======================
+
 const InfoContainer = ({ history }) => {
   //* ======================
   //*    USE_DIS_PATCH
@@ -91,6 +91,7 @@ const InfoContainer = ({ history }) => {
       history.push('/lobby');
     }
   }, [isUpdate, history]);
+  
   const renderList = [
     <InfoUserName changePages={changePages} onChange={onChange} name={name} />,
     <InfoAge changePages={changePages} onChange={onChange} age={age} />,

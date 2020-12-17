@@ -1,3 +1,7 @@
+// * ========================
+// *    SNS_LOGIN_APP_KEY
+// * ========================
+
 import dotenv from 'dotenv';
 
 dotenv.config();

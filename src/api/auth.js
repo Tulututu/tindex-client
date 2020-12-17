@@ -24,7 +24,7 @@ export async function loginUser(formData) {
 
 export async function logoutAsync() {
   localStorage.removeItem('CURRENT_USER');
-  const response = await axios.get2('/api/users/logout');
+  const response = await axios.get('/api/users/logout');
   if (!response.data.success) {
     throw new Error('로그 아웃에 실패했습니다.');
   }

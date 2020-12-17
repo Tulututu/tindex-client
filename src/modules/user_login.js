@@ -34,7 +34,6 @@ export function* loginUserSaga(action) {
       payload: loginRusult,
     });
   } catch (e) {
-    console.log(e);
     yield put({
       type: LOGIN_USER_FAILURE,
       payload: e,

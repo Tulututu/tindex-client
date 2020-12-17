@@ -1,5 +1,5 @@
-import * as registerApi from '../api/register';
 import { call, put, takeEvery } from 'redux-saga/effects';
+import * as registerApi from '../api/register';
 import { createRequestActionTypes } from '../api/createRequestSaga';
 import defaultAvatar from '../public/default.png';
 
@@ -33,7 +33,6 @@ export function* registerUserSaga(action) {
       payload: registerRusult,
     });
   } catch (e) {
-    console.log(e);
     yield put({
       type: REGISTER_FAILURE,
       payload: e,

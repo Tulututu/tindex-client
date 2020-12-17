@@ -2,12 +2,13 @@ import React, { useEffect } from 'react';
 import { useSelector , useDispatch } from 'react-redux';
 import Lobby from '../components/contents/lobby/Lobby';
 import { logOutUser } from '../modules/auth';
-
-
 import { loadUserList } from '../modules/userCard';
-//* ============================================
-//*    LOBBY_CONTAINER
-//* ============================================
+
+//* ======================
+//*    LobbyContainer.jsx
+//* ======================
+
+
 const LobbyContainer = ({ history }) => {
   //* ============================
   //*    USE_SELECTOR || DISPATCH

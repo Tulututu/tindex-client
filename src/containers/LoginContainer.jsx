@@ -3,9 +3,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import LoginModal from '../components/systems/user_login/LoginModal';
 import { authUser, loginUser } from '../modules/auth';
-//! ============================================
-//!    lOGIN_CONTAINER (CT) ('nomal login FC not yet!')
-//! ============================================
+
+// TODO ========================================
+// TODO  lOGIN_CONTAINER (일반 로그인 구현 요망 )
+// tODO ========================================
 
 const LoginContainer = ({ openLoginModal, history }) => {
   //* ======================
@@ -15,12 +16,6 @@ const LoginContainer = ({ openLoginModal, history }) => {
       auth: authReduce.userAuth?.isAuth,
       loginSuccess: authReduce.loginSuccess,
     }));
-  // const { email, password, loginSuccess } = useSelector(({ userReducer }) => ({
-  //   email: userReducer.email,
-  //   password: userReducer.password,
-
-  //   loginSuccess: userReducer.loginSuccess,
-  // }));
   //* ======================
   //*    USE_DIS_PATCH
   //* ======================
@@ -28,22 +23,7 @@ const LoginContainer = ({ openLoginModal, history }) => {
   //* ========================
   //*   VARIABLE || FUNCTIONS
   //* ========================
-  // const loginFormOnChange = (name, value) => {
-  //   dispatch(
-  //     loginFormChangeField({
-  //       key: name,
-  //       value,
-  //     }),
-  //   );
-  // };
-  // const onSubmitHandler = (event) => {
-  //   event.preventDefault();
-  //   let requestBody = {
-  //     email,
-  //     password,
-  //   };
-  //   dispatch(loginUser(requestBody));
-  // };
+
   const oAuthLoginHandler = (id, email) => {
     const request = {
       oAuthId: id,
@@ -75,8 +55,6 @@ const LoginContainer = ({ openLoginModal, history }) => {
     <>
       <LoginModal
         openLoginModal={openLoginModal}
-        // onSubmitHandler={onSubmitHandler}
-        // loginFormOnChange={loginFormOnChange}
         oAuthLoginHandler={oAuthLoginHandler}
       />
     </>
