@@ -39,7 +39,9 @@ const Kakao = ({ oAuthLoginHandler }) => {
         token={KAKAO_APP_KEY}
         buttonText="kakao"
         onSuccess={responseKakao}
+        // eslint-disable-next-line no-console
         onFail={console.error}
+        // eslint-disable-next-line no-console
         onLogout={console.info}
         style={buttonBlock}
       >

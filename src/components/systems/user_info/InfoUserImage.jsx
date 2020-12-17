@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
 import axios from 'axios';
-// eslint-disable-next-line import/no-unresolved
 import { GrFormPrevious } from 'react-icons/gr';
 import ImageCrop from '../../utils/ImageCrop';
 //* ======================
@@ -100,7 +99,6 @@ const InfoUserImage = ({
           header: { 'content-type': 'multipart/form-data' },
         })
         .then((response) => {
-          console.log({ response });
           onChange('profileImage', response.data.image);
         });
     }
@@ -110,7 +108,7 @@ const InfoUserImage = ({
   //* ======================
   const conditionImage =
     profileImage[0] === 'u'
-      ? `http://localhost:7000/${profileImage}`
+      ? `http://localhost:5000/${profileImage}`
       : profileImage;
   //* ======================
   //*    RENDER

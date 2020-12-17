@@ -40,7 +40,7 @@ const LobbyContainer = ({ history }) => {
     if (auth) {
       dispatch(loadUserList(userData));
     }
-  }, [dispatch, auth]);
+  }, [dispatch,auth, userData]);
 
   //* =========================
   //*   VARIABLE || FUNCTIONS

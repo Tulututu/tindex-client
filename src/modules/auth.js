@@ -107,6 +107,7 @@ export default function authReduce(state = {}, action) {
     case AUTH_USER_FAILURE:
       return {
         ...state,
+        userAuth: null,
         error: action.payload.message,
       };
     case LOGIN_USER:
